@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Done Right By Rob</title>
+
+  <!--CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/static/resources/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="/static/resources/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <script src="https://kit.fontawesome.com/76f3225d69.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script src="/static/resources/js/materialize.js"></script>
+  <script src="/static/resources/js/init.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.tooltipped').tooltip();
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.collapsible').collapsible({
+        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+      });
+  });</script>
+
+  <script>
+    $(document).ready(function () {$('.carousel.carousel-slider').carousel({
+      fullWidth: true
+    })});
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.materialboxed').materialbox();
+    });
+  </script>
+  <script>  $(document).ready(function(){
+    $('.carousel').carousel();
+  });</script>
+  <script>  $(document).ready(function(){
+    $('.slider').slider();
+  });</script>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="dqi6WwpN"></script>
+
+<style type="text/css">
+  .cards-container {
+    column-break-inside: avoid;
+  }
+  .cards-container .card {
+    display: inline-block;
+    overflow: visible;
+  }
+  
+  /*@media only screen and (max-width: 600px) {
+    .cards-container {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+  @media only screen and (min-width: 601px) {
+    .cards-container {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+  }
+  @media only screen and (min-width: 993px) {
+    .cards-container {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+    }
+  }*/
+  .text-center {
+    text-align: center;
+  }
+  .card:hover
+  {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+  }
+.card-image{
+    height: 230px; 
+    overflow: hidden;
+} 
+  </style>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav style="min-height: 90px;">
+      <div class="nav-wrapper">
+        <a href={{url_for('home')}} class="brand-logo center">
+          <img src="../static/DoneRightByRobLogoNoBG.png"> </a>
+          <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i
+              class="large material-icons black-text">menu</i></a>
+
+          </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!--side nav-->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <!-- <div class="background">
+                <img src="images/office.jpg">
+              </div> -->
+        <img src="../static/DoneRightByRobLogoNoBG.png">
+      </div>
+    </li>
+    <li><a class="waves-effect" href={{url_for('home')}}>Home</a></li>
+    <li><a class="waves-effect" href={{url_for('services')}}>Services</a></li>
+    <li><a class="waves-effect" href={{url_for('photos')}}>Photos</a></li>
+    <li><a class="waves-effect" href={{url_for('testimonials')}}>Testimonials</a></li>
+    <li><a class="waves-effect" href={{url_for('quote')}}>Request a Quote</a></li>
+  </ul>
+
+    {% block content%}
+
+    {% endblock %}
+  <footer class="page-footer grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text center">Done Right By Rob LLC</h5>
+          <br>
+          <div class="col s12  hide-on-med-and-down center-align">
+            <a href="https://www.facebook.com/DoneRightbyRob/" style="color:black;"> <i
+                class="fab fa-facebook fa-2x"></i></a>
+            <a style="padding-left:25px; color:black;"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href=" http://m.me/DoneRightbyRob" style="padding-left:25px;color:black;"><i
+                class="fab fa-facebook-messenger fa-2x"></i></a>
+          </div>
+          <div class="col s12  hide-on-large-only center-align">
+            <a href="https://www.facebook.com/DoneRightbyRob/" style="color:black;"> <i
+                class="fab fa-facebook fa-2x"></i></a>
+            <a style="padding-left:25px; color:black;"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href=" http://m.me/DoneRightbyRob" style="padding-left:25px;color:black;"><i
+                class="fab fa-facebook-messenger fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-copyright grey darken-2">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6">
+            <p class="center-on-small-only">Made with ❤️ in Chicago by Busen</p>
+          </div>
+          <div class="col s12 m6">
+            <a href="#"><p class="center-on-small-only">Privacy Policy</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+</body>
+</html>

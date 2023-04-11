@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{%block content %}
+<!-- <div class="container">
+    <div class="row">
+        {%for pic in pictures%}
+                <div class="col s12 m4"><img src="../static/pictures/{{pic}}" alt="" class="materialboxed responsive-img"
+                style="width:200px;height:200px;">
+            </div>
+                {%endfor%}
+    </div>
+</div>
+</div> -->
+<div class="carousel">
+    {%for pic in pictures%}
+    <a class="carousel-item"><img src="../static/pictures/{{pic}}" style="width:400px;height:400px;"></a>
+    {%endfor%}
+</div>
+<div class="container">
+    <div class="fb-post" data-href="https://www.facebook.com/DoneRightbyRob/posts/340917517297615" data-show-text="true">
+    <blockquote cite="https://www.facebook.com/DoneRightbyRob/posts/340917517297615" class="fb-xfbml-parse-ignore">
+        <p>Another before and after of a beautiful stained fence.</p>Posted by <a
+            href="https://www.facebook.com/DoneRightbyRob/">Done Right by Rob LLC</a> on&nbsp;<a
+            href="https://www.facebook.com/DoneRightbyRob/posts/340917517297615">Friday, July 31, 2020</a>
+    </blockquote>
+</div>
+</div>
+
+{% endblock %}

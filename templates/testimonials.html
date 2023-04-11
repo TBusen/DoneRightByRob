@@ -1,0 +1,104 @@
+{% extends "index.html" %}
+{%block content %}
+<div class="parallax-container center valign-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 white-text">
+          <!-- <h3 class="white-text">Contact us for all of your handyman needs</h3> -->
+          <!-- <h3>No job is too small. Right job at the Right price</h3> -->
+          <h3>{{message}}</h3>
+          <a class=" btn-large  #f57c00 orange darken-2" data-position="bottom" href={{url_for('quote')}}
+            data-tooltip="Click me to get a quote!">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+<div class="parallax">
+    <img src="../static/tools3.jpg">
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- <h5 class="white-text center">Done Right By Rob LLC</h5> -->
+        <!-- <br> -->
+        <div class="col s12 center-align">
+          <img src="../static/testimonials/toprated.png" class="responsive-img">
+          <img src="../static/testimonials/elite.png" class="responsive-img">
+          <img src="../static/testimonials/soap.png" class="responsive-img">
+          <img src="../static/testimonials/ycoc.png" class="responsive-img">
+        </div>
+    </div>
+  </div>
+
+  <div class="parallax-container center valign-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 white-text">
+                <!-- <h3 class="white-text">Contact us for all of your handyman needs</h3> -->
+                <h3>See what our customers are saying about us!</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax">
+        <img src="/static/tools3.jpg">
+    </div>
+
+</div>
+
+  <div class="col s12 m6">
+    <!-- This is the format for home advisor review -->
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s6 m6">
+          <p>Darlene P. in Aurora on 01/18/1982 said:</p>
+            </div>
+          <div class="col s6 m6 right-align">
+          <img src="../static/homeadvisor.png">
+          </div>
+          </div>
+          <p>"Very helpful. Made suggestions that were cost effective and worked out great."</p>
+
+        </div>
+        <div class="card-action">
+          Rating:
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card horizontal">
+      <!-- <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div> -->
+      <div class="card-stacked">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s6 m6">
+              <p>Darlene P. in Aurora on 01/18/1982 said:</p>
+            </div>
+          <div class="col s6 m6 right-align">
+          <img src="../static/fblogo.png">
+          </div>
+          </div>
+          <p>"Very helpful. Made suggestions that were cost effective and worked out great."</p>
+        </div>
+        <div class="card-action">
+          Facebook Recommended:
+<img src="../static/fbrecommended.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}
+
+<!-- [{'author': ' Darlene P. ', 'location': 'Aurora, IL', 'review': 'Very helpful. Made suggestions that were cost effective and worked out great.', 'rating': '5.0'}, {'author': ' Joann M. ', 'location': 'Yorkville, IL', 'review': 'Finished bigger project in a timely manner. However had a few smaller projects. I am still waiting for completion of a project.', 'rating': '3.5'}] -->

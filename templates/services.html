@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+{%block content %}
+
+<div class="parallax-container center valign-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 white-text">
+          <!-- <h3 class="white-text">Contact us for all of your handyman needs</h3> -->
+          <!-- <h3>No job is too small. Right job at the Right price</h3> -->
+          <h3>{{message}}</h3>
+          <a class=" btn-large  #f57c00 orange darken-2" data-position="bottom" href={{url_for('quote')}}
+            data-tooltip="Click me to get a quote!">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+<div class="parallax">
+    <img src="../static/tools3.jpg">
+</div>
+</div>
+
+<!-- <div>
+<ul class="class="collapsible>
+    <li class="collection-header"><h4>Some services</h4></li>
+    {% for service in services %}
+    <div class="collapsible-header"><i class="material-icons">check_circle</i>{{service}}</div>
+    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    {% endfor %}
+</ul>
+</div> -->
+<ul class="collapsible">
+    {% for service in services %}
+    <li>
+      <div class="collapsible-header"><i class="material-icons">check_circle</i>{{service}}</div>
+      <div class="collapsible-body"><span>{{services.get(service)}}</span></div>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="container">
+<h5>Not seeing a service you need on the list?  Request a quote and we'll see what we can do.</h5>
+</div>
+{% endblock %}
+<script>
+    $(document).ready(function(){
+      $('.collapsible').collapsible({
+        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+      });
+  });</script>
